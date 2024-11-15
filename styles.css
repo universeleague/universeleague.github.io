@@ -162,7 +162,7 @@ body {
 }
 .table__entry-icon {
   border-radius: 50%;
-  width: 50px;
+  width: 60px;
   height: 60px;
   margin: 6px 8px;
   display: block;
@@ -232,10 +232,10 @@ body {
   border: 5px solid var(--groove);
 }
 .eliminated .table__entry-icon-border {
-  border: 5px solid var(#A9A9A9);
+  border: 5px solid #a9a9a9);
 }
 .eliminated .ranking__entry-icon-border {
-  border: 5px solid var(A9A9A9);
+  border: 5px solid #a9a9a9);
 }
 .ranking__entry-icon-border.dragged-over { /* defines a border for when you drag over a trainee in ranking */
   border: 5px solid var(--checked-blue);
@@ -316,7 +316,7 @@ body {
   bottom: -5px;
   margin: auto;
   border-radius: 50%;
-  background-color: var(#A9A9A9);
+  background-color: #a9a9a9;
   box-sizing: border-box;
   padding: 2px;
   /* badge text options */
