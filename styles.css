@@ -14,12 +14,9 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --a-rank: #fb4a8c;
-  --b-rank: #fc840c;
-  --c-rank: #ffc407;
-  --d-rank: #19b468;
-  --f-rank: #a6a6a4;
-  --no-rank: #707070;
+  --rhythm: #f1344d;
+  --groove: #09542b;
+  --beat: #343af1;
 }
 
 p {
@@ -328,7 +325,7 @@ body {
   bottom: -5px;
   margin: auto;
   border-radius: 50%;
-  background-color: var(--a-rank);
+  background-color: var(#ffffff);
   box-sizing: border-box;
   padding: 2px;
   /* badge text options */
@@ -344,26 +341,17 @@ body {
 }
 
 /* Styles for different badge colors */
-.bg-no {
-  background-color: var(--no-rank);
+.bg-rhythm {
+  background-color: var(--rhythm);
 }
-.bg-a {
-  background-color: var(--a-rank);
+.bg-beat {
+  background-color: var(--beat);
 }
-.bg-b {
-  background-color: var(--b-rank);
-}
-.bg-c {
-  background-color: var(--c-rank);
-}
-.bg-d {
-  background-color: var(--d-rank);
-}
-.bg-f {
-  background-color: var(--f-rank);
+.bg-groove {
+  background-color: var(--groove);
 }
 .eliminated .ranking__entry-icon-badge {
-  background-color: var(--no-rank);
+  background-color: #f2f2f2;
 }
 
 .ranking__entry .company {
