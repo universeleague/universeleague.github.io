@@ -62,14 +62,14 @@ trainee: {
   id: ... // position in csv used for simple recognition
   name_romanized: ...
   name_hangul: ...
-  name_japanese: ...
+  null
   company: ...
-  grade: a/b/c/d/f
+  team: ...
   birthyear: ...
   image: ...
   selected: false/true // whether user selected them
   eliminated: false/true
-  top12: false/true
+  top7: false/true
 }
 */
 function convertCSVArrayToTraineeData(csvArrays) {
@@ -84,10 +84,10 @@ function convertCSVArrayToTraineeData(csvArrays) {
       trainee.name_hangul = traineeArray[2];
     }
     trainee.company = traineeArray[3];
-    trainee.grade = traineeArray[4];
+    trainee.team = traineeArray[4];
     trainee.birthyear = traineeArray[5];
     trainee.eliminated = traineeArray[6] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
-    trainee.top12 = traineeArray[6] === 't'; // sets trainee to top 12 if 't' appears in 6th column
+    trainee.top7 = traineeArray[6] === 't'; // sets trainee to top 12 if 't' appears in 6th column
     trainee.id = parseInt(traineeArray[7]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
@@ -242,6 +242,24 @@ const abbreviatedCompanies = {
   "RAINBOW BRIDGE WORLD": "RBW",
   "BLOCKBERRY CREATIVE": "BBC",
   "INDIVIDUAL TRAINEE": "INDIVIDUAL",
+
+}
+
+const abbreviatedNationalities = {
+  "JAPAN": "JPN 🇯🇵",
+  "CHINA": "CHN 🇨🇳",
+  "SOUTH KOREA": "KOR 🇰🇷",
+  "CANADA": "CAN 🇨🇦",
+  "AUSTRALIA": "AUS 🇦🇺",
+  "THAILAND": "THA 🇹🇭",
+  "MONGOLIA": "MNG 🇲🇳",
+  "MYANMAR": "MMR 🇲🇲",
+  "ITALY": "ITA 🇮🇹",
+  "PHILIPPINES": "PHL 🇵🇭",
+  "MALAYSIA": "MYS 🇲🇾",
+  "JAPAN/FRANCE": "JPN/FRA 🇯🇵🇫🇷",
+  "VIETNAM": "VNM 🇻🇳",
+  "JAPAN/AUSTRALIA": "JPN/AUS 🇯🇵🇦🇺"
 }
 
 function populateRankingEntry(trainee, currRank) {
@@ -251,7 +269,7 @@ function populateRankingEntry(trainee, currRank) {
     modifiedCompany = abbreviatedCompanies[modifiedCompany];
   }
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let top12 = (showTop12 && trainee.top7) && "top7";
   const rankingEntry = `
   <div class="ranking__entry ${eliminated}">
     <div class="ranking__entry-view">
@@ -389,7 +407,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://produce48.github.io/";
+const currentURL = "https://abubalogun/universeleague.github.io/";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
@@ -421,7 +439,7 @@ var trainees = [];
 var filteredTrainees = [];
 // holds the ordered list of rankings that the user selects
 var ranking = newRanking();
-const rowNums = [1, 2, 4, 5];
+const rowNums = [1, 2, 4];
 //window.addEventListener("load", function () {
   populateRanking();
   readFromCSV("./trainee_info.csv");
