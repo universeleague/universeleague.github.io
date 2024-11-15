@@ -3,7 +3,7 @@
 // always initially sort by id
 var activeCompares = [idCompare]
 var showEliminated = false;
-var showTop12 = false;
+var showTop7 = false;
 
 // This a compare by id on the trainees and guarantees stability of the sort
 function idCompare(trainee1, trainee2) {
