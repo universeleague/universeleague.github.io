@@ -84,8 +84,8 @@ function convertCSVArrayToTraineeData(csvArrays) {
       trainee.name_japanese = traineeArray[1];
       trainee.name_hangul = traineeArray[2];
     }
-    trainee.company = traineeArray[3];
-    trainee.nationality = traineeArray [4];
+    trainee.company = traineeArray[4];
+    trainee.nationality = traineeArray [3];
     trainee.grade = traineeArray[5];
     trainee.birthyear = traineeArray[6];
     trainee.eliminated = traineeArray[7] === 'e'; // sets trainee to be eliminated if 'e' appears in 7th col
