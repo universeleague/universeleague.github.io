@@ -90,7 +90,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.top7 = traineeArray[6] === 't'; // sets trainee to top 12 if 't' appears in 6th column
     trainee.id = parseInt(traineeArray[7]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
-      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
+      trainee.name_romanized.replace(" ", "") + ".jpg";
     return trainee;
   });
   filteredTrainees = trainees;
@@ -111,7 +111,7 @@ function newTrainee() {
 // Constructor for a blank ranking list
 function newRanking() {
   // holds the ordered list of rankings that the user selects
-  let ranking = new Array(12);
+  let ranking = new Array(7);
   for (let i = 0; i < ranking.length; i++) {
     ranking[i] = newTrainee();
   }
@@ -177,12 +177,12 @@ function populateTable(trainees) {
 function populateTableEntry(trainee) {
   // eliminated will have value "eliminated" only if trainee is eliminated and showEliminated is true, otherwise this is ""
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let top12 = (showTop12 && trainee.top7) && "top7";
   const tableEntry = `
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
-      <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
+      <div class="table__entry-icon-border ${trainee.team.toLowerCase()}-rank-border"></div>
       ${
         top12 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
