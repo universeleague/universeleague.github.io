@@ -86,6 +86,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.company = traineeArray[4];
     trainee.nationality = traineeArray[3];
     trainee.birthyear = traineeArray[6];
+    trainee.team = traineeArray[5];
     trainee.eliminated = traineeArray[8] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
     trainee.top7 = traineeArray[7] === 't'; // sets trainee to top 12 if 't' appears in 6th column
     trainee.id = parseInt(traineeArray[7]) - 1; // trainee id is the original ordering of the trainees in the first csv
@@ -103,7 +104,7 @@ function newTrainee() {
     id: -1, // -1 denotes a blank trainee spot
     name_romanized: '&#8203;', // this is a blank character
     company: '&#8203;', // this is a blank character
-    grade: 'no',
+    team: 'no',
     image: 'emptyrank.png',
   };
 }
@@ -275,9 +276,9 @@ function populateRankingEntry(trainee, currRank) {
     <div class="ranking__entry-view">
       <div class="ranking__entry-icon">
         <img class="ranking__entry-img" src="assets/trainees/${trainee.image}" />
-        <div class="ranking__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
+        <div class="ranking__entry-icon-border ${trainee.team.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
       </div>
-      <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
+      <div class="ranking__entry-icon-badge bg-${trainee.team.toLowerCase()}">${currRank}</div>
       ${
         top7 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
