@@ -1,7 +1,7 @@
 /* define constants up here */
 :root {
-  --banner-bg-start: #fd5e6d;
-  --banner-bg-end: #ef5079;
+  --banner-bg-start: #5373da;
+  --banner-bg-end: #4294bf;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -114,7 +114,7 @@ body {
   border: none;
   border-radius: 3px;
   padding: 4px 6px 4px 6px;
-  background-color: var(--a-rank);
+  background-color: #5373da;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
