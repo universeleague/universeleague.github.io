@@ -1,8 +1,7 @@
 /* define constants up here */
 :root {
-	
-  --banner-bg-start: #2640c1;
-  --banner-bg-end: #4294bf;
+  --banner-bg-start: #fd5e6d;
+  --banner-bg-end: #ef5079;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -12,16 +11,15 @@
   --ranking-affil-gray: #989898;
   --save-box-gray: #b1b1b1;
 
-  --checked-green: #097231;
+  --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-
-  /* team colors */
-  --rhythm:
-  --beat:
-  --groove
-	
-
+  --a-rank: #fb4a8c;
+  --b-rank: #fc840c;
+  --c-rank: #ffc407;
+  --d-rank: #19b468;
+  --f-rank: #a6a6a4;
+  --no-rank: #707070;
 }
 
 p {
@@ -40,7 +38,7 @@ body {
 
 /* Styles for banner */
 #top-banner {
-  background: radial-gradient(circle, var(--banner-bg-start), var(--banner-bg-end) 70%);
+  background: radial-gradient(circle, var(--banner-bg-start), var(--banner-bg-end) 60%);
   /* background-color: var(--banner-bg-color); */
   padding: 25px;
 
@@ -49,7 +47,7 @@ body {
   text-align: center;
 }
 #banner-image {
-  width: 250px;
+  width: 125px;
   margin-bottom: 15px;
 }
 #banner-title {
@@ -58,7 +56,7 @@ body {
 }
 #banner-subtitle {
   font-family: 'Roboto Condensed', sans-serif;
-  color: #ffd1d8;
+  color: #f3cdd3;
   font-size: 12px;
 }
 
@@ -116,14 +114,14 @@ body {
   border: none;
   border-radius: 3px;
   padding: 4px 6px 4px 6px;
-  background-color: #f4466f;
+  background-color: var(--a-rank);
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: white;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
-  background-color: #F2819D;
+  background-color: #ff2475;
 }
 #getlink-textbox {
   margin-left: 5px;
@@ -167,7 +165,7 @@ body {
 }
 .table__entry-icon {
   border-radius: 50%;
-  width: 70px;
+  width: 60px;
   height: 60px;
   margin: 6px 8px;
   display: block;
@@ -194,7 +192,7 @@ body {
   height: inherit;
   border-radius: 50%;
   /* blue background */
-  background-color: var(--checked-green);
+  background-color: var(--checked-blue);
   /* the padding insets the checkbox (makes it bigger/smaller) */
   padding: 10px;
   box-sizing: border-box;
@@ -227,14 +225,23 @@ body {
   background-origin: content-box;
 }
 /* Different entry borders */
-.rhythm-rhythm-border {
-  border: 5px solid var(--rhythm);
+.a-rank-border {
+  border: 5px solid var(--a-rank);
 }
-.beat-beat-border {
-  border: 5px solid var(--beat);
+.b-rank-border {
+  border: 5px solid var(--b-rank);
 }
-.groove-groove-border {
-  border: 5px solid var(--groove);
+.c-rank-border {
+  border: 5px solid var(--c-rank);
+}
+.d-rank-border {
+  border: 5px solid var(--d-rank);
+}
+.f-rank-border {
+  border: 5px solid var(--f-rank);
+}
+.no-rank-border {
+  border: none;
 }
 .eliminated .table__entry-icon-border {
   border: 5px solid var(--no-rank);
@@ -243,7 +250,7 @@ body {
   border: 5px solid var(--no-rank);
 }
 .ranking__entry-icon-border.dragged-over { /* defines a border for when you drag over a trainee in ranking */
-  border: 5px solid var(--checked-green);
+  border: 5px solid var(--checked-blue);
 }
 
 .table__entry-text {
@@ -258,7 +265,7 @@ body {
   font-size: 12px;
   color: var(--other-name-gray);
 }
-.table__entry .nationalityandyear {
+.table__entry .companyandyear {
   font-size: 10px;
   color: var(--affil-gray);
   display: block;
@@ -312,6 +319,23 @@ body {
   border-radius: 50%;
   box-sizing: border-box;
 }
+.ranking__entry-icon-badge {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: var(--a-rank);
+  box-sizing: border-box;
+  padding: 2px;
+  /* badge text options */
+  font-weight: 900;
+  font-size: 8px;
+  text-align: center;
+  color: white;
 }
 .ranking__row-text {
   font-family: 'Open Sans', sans-serif;
@@ -319,30 +343,30 @@ body {
   text-align: center;
 }
 
-/* Styles for different badge colors
+/* Styles for different badge colors */
 .bg-no {
   background-color: var(--no-rank);
 }
-.bg-p {
-  background-color: var(--p-rank);
+.bg-a {
+  background-color: var(--a-rank);
 }
-.bg-r {
-  background-color: var(--r-rank);
+.bg-b {
+  background-color: var(--b-rank);
 }
-.bg-i {
-  background-color: var(--i-rank);
+.bg-c {
+  background-color: var(--c-rank);
 }
-.bg-s {
-  background-color: var(--s-rank);
+.bg-d {
+  background-color: var(--d-rank);
 }
-.bg-m {
-  background-color: var(--m-rank);
+.bg-f {
+  background-color: var(--f-rank);
 }
 .eliminated .ranking__entry-icon-badge {
   background-color: var(--no-rank);
 }
-*/
-.ranking__entry .nationality {
+
+.ranking__entry .company {
   color: var(--ranking-affil-gray);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
