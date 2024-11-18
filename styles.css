@@ -222,13 +222,13 @@ body {
   background-origin: content-box;
 }
 /* Different entry borders */
-.rhythm-border {
+.rhythm-rank-border {
   border: 5px solid var(--rhythm);
 }
-.beat-border {
+.beat-rank-border {
   border: 5px solid var(--beat);
 }
-.groove-border {
+.groove-rank-border {
   border: 5px solid var(--groove);
 }
 .eliminated .table__entry-icon-border {
