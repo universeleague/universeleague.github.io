@@ -81,16 +81,16 @@ function convertCSVArrayToTraineeData(csvArrays) {
       trainee.name_hangul = traineeArray[1];
     } else {
       trainee.name_japanese = traineeArray[1];
-      trainee.name_hangul = traineeArray[2];
+      trainee.name_hangul = traineeArray[1];
     }
-    trainee.company = traineeArray[3];
-    trainee.grade = traineeArray[4];
-    trainee.birthyear = traineeArray[5];
-    trainee.eliminated = traineeArray[6] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
-    trainee.top7 = traineeArray[6] === 't'; // sets trainee to top 12 if 't' appears in 6th column
-    trainee.id = parseInt(traineeArray[7]) - 1; // trainee id is the original ordering of the trainees in the first csv
+    trainee.nationality = traineeArray[3];
+    trainee.company = traineeArray[4];
+    trainee.team = traineeArray[5];
+    trainee.birthyear = traineeArray[6] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
+    trainee.top7 = traineeArray[7] === 't'; // sets trainee to top 12 if 't' appears in 6th column
+    trainee.id = parseInt(traineeArray[8]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
-      trainee.name_romanized.replaceAll(" ","") + ".jpg";
+      trainee.name_romanized.replaceAll(" ","").toLowerCase() + ".jpg";
     return trainee;
   });
   filteredTrainees = trainees;
@@ -361,7 +361,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://skzweme.github.io/Project7/";
+const currentURL = "https://universeleague.github.io";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
