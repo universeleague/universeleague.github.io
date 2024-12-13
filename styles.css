@@ -1,8 +1,7 @@
-
-}
+/* define constants up here */
 :root {
-  --banner-bg-start: #32cafdcc;
-  --banner-bg-end: #1a9cc8;
+  --banner-bg-start: #fd5e6d;
+  --banner-bg-end: #ef5079;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -15,10 +14,10 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --s-rank: #fff46f;
-  --a-rank: #6fc6ff;
-  --b-rank: #ff6fe7;
-  --c-rank: #a4a4a4;
+  --a-rank: #fb4a8c;
+  --b-rank: #fc840c;
+  --c-rank: #ffc407;
+  --d-rank: #19b468;
   --f-rank: #a6a6a4;
   --no-rank: #707070;
 }
@@ -53,22 +52,12 @@ body {
 }
 #banner-title {
   font-family: 'Roboto Condensed', sans-serif;
-  color:#FAF400;
-  font-size: 20px;
+  font-size: 16px;
 }
 #banner-subtitle {
   font-family: 'Roboto Condensed', sans-serif;
-  color: #e7e300;
-  font-size: 15px;
-}
-#banner-subtitle2 {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
-  font-size: 8px;
-}
-a:link, a:visited {
-  color: #ffffff;
-  text-decoration: none;
+  color: #f3cdd3;
+  font-size: 12px;
 }
 
 /* Styles for table */
@@ -132,7 +121,7 @@ a:link, a:visited {
   color: white;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
-  background-color: #8941ff;
+  background-color: #ff2475;
 }
 #getlink-textbox {
   margin-left: 5px;
@@ -245,8 +234,8 @@ a:link, a:visited {
 .c-rank-border {
   border: 5px solid var(--c-rank);
 }
-.s-rank-border {
-  border: 5px solid var(--s-rank);
+.d-rank-border {
+  border: 5px solid var(--d-rank);
 }
 .f-rank-border {
   border: 5px solid var(--f-rank);
@@ -339,7 +328,7 @@ a:link, a:visited {
   bottom: -5px;
   margin: auto;
   border-radius: 50%;
-  background-color: var(--s-rank);
+  background-color: var(--a-rank);
   box-sizing: border-box;
   padding: 2px;
   /* badge text options */
@@ -368,7 +357,7 @@ a:link, a:visited {
   background-color: var(--c-rank);
 }
 .bg-d {
-  background-color: var(--s-rank);
+  background-color: var(--d-rank);
 }
 .bg-f {
   background-color: var(--f-rank);
