@@ -125,14 +125,14 @@ a:link, a:visited {
   border: none;
   border-radius: 3px;
   padding: 4px 6px 4px 6px;
-  background-color: var(--a-rank);
+  background-color: #ADD8E6;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: white;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
-  background-color: #8941ff;
+  background-color: #4BAAC8;
 }
 #getlink-textbox {
   margin-left: 5px;
