@@ -1,8 +1,7 @@
 /* define constants up here */
-}
 :root {
-  --banner-bg-start: #89CFF0;
-  --banner-bg-end: #000080;
+  --banner-bg-start: #121452;
+  --banner-bg-end: #5073c7;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -15,10 +14,10 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --r-rank: #FF0000;
-  --g-rank: #008000;
-  --b-rank: #0000FF;
-  --c-rank: #a4a4a4;
+  --r-rank: #ed1111;
+  --g-rank: #089c1b;
+  --b-rank: #0b16e6;
+  --d-rank: #19b468;
   --f-rank: #a6a6a4;
   --no-rank: #707070;
 }
@@ -53,22 +52,12 @@ body {
 }
 #banner-title {
   font-family: 'Roboto Condensed', sans-serif;
-  color:#FAF400;
-  font-size: 20px;
+  font-size: 16px;
 }
 #banner-subtitle {
   font-family: 'Roboto Condensed', sans-serif;
-  color: #e7e300;
-  font-size: 15px;
-}
-#banner-subtitle2 {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
-  font-size: 8px;
-}
-a:link, a:visited {
-  color: #ffffff;
-  text-decoration: none;
+  color: #f3cdd3;
+  font-size: 12px;
 }
 
 /* Styles for table */
@@ -125,14 +114,14 @@ a:link, a:visited {
   border: none;
   border-radius: 3px;
   padding: 4px 6px 4px 6px;
-  background-color: #ADD8E6;
+  background-color: var(--b-rank);
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: white;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
-  background-color: #4BAAC8;
+  background-color: #121452;
 }
 #getlink-textbox {
   margin-left: 5px;
@@ -236,17 +225,17 @@ a:link, a:visited {
   background-origin: content-box;
 }
 /* Different entry borders */
-.a-rank-border {
-  border: 5px solid var(--a-rank);
+.r-rank-border {
+  border: 5px solid var(--r-rank);
+}
+.g-rank-border {
+  border: 5px solid var(--g-rank);
 }
 .b-rank-border {
   border: 5px solid var(--b-rank);
 }
-.c-rank-border {
-  border: 5px solid var(--c-rank);
-}
-.s-rank-border {
-  border: 5px solid var(--s-rank);
+.d-rank-border {
+  border: 5px solid var(--d-rank);
 }
 .f-rank-border {
   border: 5px solid var(--f-rank);
@@ -339,7 +328,7 @@ a:link, a:visited {
   bottom: -5px;
   margin: auto;
   border-radius: 50%;
-  background-color: var(--s-rank);
+  background-color: #525259;
   box-sizing: border-box;
   padding: 2px;
   /* badge text options */
@@ -368,7 +357,7 @@ a:link, a:visited {
   background-color: var(--b-rank);
 }
 .bg-d {
-  background-color: var(--s-rank);
+  background-color: var(--d-rank);
 }
 .bg-f {
   background-color: var(--f-rank);
