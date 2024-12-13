@@ -1,7 +1,8 @@
 /* define constants up here */
+}
 :root {
-  --banner-bg-start: #fd5e6d;
-  --banner-bg-end: #ef5079;
+  --banner-bg-start: #89CFF0;
+  --banner-bg-end: #000080;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -14,10 +15,10 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --a-rank: #fb4a8c;
-  --b-rank: #fc840c;
-  --c-rank: #ffc407;
-  --d-rank: #19b468;
+  --r-rank: #FF0000;
+  --g-rank: #008000;
+  --b-rank: #0000FF;
+  --c-rank: #a4a4a4;
   --f-rank: #a6a6a4;
   --no-rank: #707070;
 }
@@ -51,13 +52,23 @@ body {
   margin-bottom: 15px;
 }
 #banner-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
+  font-family: 'Heavy Falcon', sans-serif;
+  color:#FAF400;
+  font-size: 20px;
 }
 #banner-subtitle {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #f3cdd3;
-  font-size: 12px;
+  font-family: 'Azonix', sans-serif;
+  color: #e7e300;
+  font-size: 15px;
+}
+#banner-subtitle2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 8px;
+}
+a:link, a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Styles for table */
@@ -121,7 +132,7 @@ body {
   color: white;
 }
 #getlink-button:active { /* these styles are active while get link is being pressed */
-  background-color: #ff2475;
+  background-color: #8941ff;
 }
 #getlink-textbox {
   margin-left: 5px;
@@ -234,8 +245,8 @@ body {
 .c-rank-border {
   border: 5px solid var(--c-rank);
 }
-.d-rank-border {
-  border: 5px solid var(--d-rank);
+.s-rank-border {
+  border: 5px solid var(--s-rank);
 }
 .f-rank-border {
   border: 5px solid var(--f-rank);
@@ -328,7 +339,7 @@ body {
   bottom: -5px;
   margin: auto;
   border-radius: 50%;
-  background-color: var(--a-rank);
+  background-color: var(--s-rank);
   box-sizing: border-box;
   padding: 2px;
   /* badge text options */
@@ -347,17 +358,17 @@ body {
 .bg-no {
   background-color: var(--no-rank);
 }
-.bg-a {
-  background-color: var(--a-rank);
+.bg-r {
+  background-color: var(--r-rank);
+}
+.bg-g {
+  background-color: var(--g-rank);
 }
 .bg-b {
   background-color: var(--b-rank);
 }
-.bg-c {
-  background-color: var(--c-rank);
-}
 .bg-d {
-  background-color: var(--d-rank);
+  background-color: var(--s-rank);
 }
 .bg-f {
   background-color: var(--f-rank);
