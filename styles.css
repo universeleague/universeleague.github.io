@@ -1,14 +1,14 @@
 /* define constants up here */
-@import url(//db.onlinewebfonts.com/c/50cd2aad9c8f35800bb6beac3ad42f16?family=Azonix);
-@font-face {font-family: "Azonix"; src: url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot"); src: url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff") format("woff"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.svg#Azonix") format("svg"); }
+@import url(//db.onlinewebfonts.com/c/50cd2aad9c8f35800bb6beac3ad42f16?family=Roboto Condensed);
+@font-face {font-family: "Roboto Condensed"; src: url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot"); src: url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff") format("woff"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.svg#Roboto Condensed") format("svg"); }
 @font-face {
-  font-family: "Heavy Falcon";
+  font-family: "Roboto Condensed";
   src: url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.eot");
   src: url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.eot?#iefix")format("embedded-opentype"),
   url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.woff2")format("woff2"),
   url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.woff")format("woff"),
   url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.svg#Heavy Falcon")format("svg");
+  url("https://db.onlinewebfonts.com/t/194faa6523bf16cd9dcf7e68dceb9ea6.svg#Roboto Condensed")format("svg");
 }
 :root {
   --banner-bg-start: #32cafdcc;
@@ -62,12 +62,12 @@ body {
   margin-bottom: 15px;
 }
 #banner-title {
-  font-family: 'Heavy Falcon', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   color:#FAF400;
   font-size: 20px;
 }
 #banner-subtitle {
-  font-family: 'Azonix', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #e7e300;
   font-size: 15px;
 }
